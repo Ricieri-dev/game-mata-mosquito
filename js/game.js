@@ -4,7 +4,7 @@ var altura = 0
 function adjustStage(){
     width = window.screen.width
     height = window.screen.height
-    console.log(width,height)
+    
 }
 
 
@@ -13,11 +13,11 @@ function randomSize(){
     var classe = Math.floor(Math.random() * 3);
     switch(classe){
         case 0:
-
+            return 'mosquito1'
         case 1:
-
+            return 'mosquito2'
         case 2:
-            
+            return 'mosquito3'
     }
 }
 
@@ -34,11 +34,21 @@ positionY = positionY < 0 ? 0 : positionY;
 //criar elemento html
 var mosquito = document.createElement('img')
 mosquito.src = 'img/mosca.png'
-mosquito.className = 'mosquito1'
+mosquito.className = randomSize() + ' ' + randomSide() 
 mosquito.style.left = positionX + 'px'
 mosquito.style.top = positionY + 'px'
 mosquito.style.position = 'absolute'
 
 document.body.appendChild(mosquito)
-    randomSize()
+    
+}
+
+function randomSide(){
+     var classe = Math.floor(Math.random() * 2);
+        switch(classe){
+        case 0:
+            return 'ladoA'
+        case 1:
+            return 'ladoB'
+    }
 }
