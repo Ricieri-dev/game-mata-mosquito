@@ -24,6 +24,11 @@ function randomSize(){
 adjustStage()
 
 function randomicPosition(){
+
+    //remover mosquito anterior (caso exista)
+    if(document.getElementById('mosquito')){
+    document.getElementById('mosquito').remove()
+    }
 var positionX = Math.floor(Math.random()*width) - 90;
 var positionY = Math.floor(Math.random()*height) - 90;
 
@@ -38,6 +43,7 @@ mosquito.className = randomSize() + ' ' + randomSide()
 mosquito.style.left = positionX + 'px'
 mosquito.style.top = positionY + 'px'
 mosquito.style.position = 'absolute'
+mosquito.id = 'mosquito'
 
 document.body.appendChild(mosquito)
     
