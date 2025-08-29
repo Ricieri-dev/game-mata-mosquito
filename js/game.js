@@ -31,7 +31,8 @@ function randomicPosition(){
     document.getElementById('mosquito').remove()
 
     if(vidas > 3){
-        alert('interromper jogo')
+        
+        window.location.href = 'gameover.html'
     
     }else{document.getElementById('v' + vidas ).src="img/coracao_vazio.png"
         vidas++
