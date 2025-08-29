@@ -1,13 +1,22 @@
 var largura = 0
 var altura = 0
 var vidas = 1
-
+var tempo = 15
 function adjustStage(){
     width = window.screen.width
     height = window.screen.height
     
 }
 
+var cronometro = setInterval(function(){
+    tempo -= 1
+    if (tempo < 0){
+
+    }else{
+        document.getElementById('cronometro').innerHTML = tempo //parei aqui
+    }
+    
+},1000)
 
 
 function randomSize(){
