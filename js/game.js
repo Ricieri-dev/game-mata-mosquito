@@ -2,6 +2,19 @@ var largura = 0
 var altura = 0
 var vidas = 1
 var tempo = 15
+var nivel = window.location.search
+var criaMosquitoTempo= 1500;
+
+nivel.replace('?','')
+
+if (nivel === 'normal'){
+    criaMosquitoTempo= 1500
+}else if(nivel === 'dificil'){
+    criaMosquitoTempo= 1000
+}else if(nivel === 'chucknorris'){
+    criaMosquitoTempo= 750
+}
+
 function adjustStage(){
     width = window.screen.width
     height = window.screen.height
